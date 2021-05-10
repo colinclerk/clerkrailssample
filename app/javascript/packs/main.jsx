@@ -16,7 +16,7 @@ const APIRequestButton = () => {
   const [response, setResponse] = React.useState(null);
 
   const makeRequest = async () => {
-    const response = await fetch("/api/clerk_session");
+    const response = await fetch("/api/clerk_user");
     if (response.status == 200) {
       const session = await response.json();
       setResponse(JSON.stringify(session));
@@ -28,7 +28,11 @@ const APIRequestButton = () => {
   return (
     <div style={{ textAlign: "center" }}>
       <button onClick={makeRequest}>Make request</button>
-      {response && <div style={{ width: 400 }}>Response: {response}</div>}
+      {response && (
+        <div style={{ width: 400, margin: "1rem auto" }}>
+          Response: {response}
+        </div>
+      )}
     </div>
   );
 };

@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     }
 
   # API routes
-  get '/api/clerk_session' => 'api#clerk_session' 
+  get '/api/clerk_user' => 'api#clerk_user' 
 end
