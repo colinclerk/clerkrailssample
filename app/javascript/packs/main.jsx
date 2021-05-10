@@ -19,7 +19,7 @@ const APIRequestButton = () => {
     const response = await fetch("/api/clerk_session");
     if (response.status == 200) {
       const session = await response.json();
-      setResponse(session);
+      setResponse(JSON.stringify(session));
     } else {
       setResponse(`Server failed with ${response.status}`);
     }
