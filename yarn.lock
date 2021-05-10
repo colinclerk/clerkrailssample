@@ -931,6 +931,11 @@
     "@babel/helper-validator-identifier" "^7.14.0"
     to-fast-properties "^2.0.0"
 
+"@clerk/clerk-react@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-1.7.0.tgz#6e68fca81128b124cd001cbf097457ba161608ce"
+  integrity sha512-3Yqymbw0/noLeKkwoQZWWLlfAgKv6yMET3/1hO8EXirsstH35EiRXfFMv5CEENTXH9onZVBbNZH6U64EzJazCg==
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
