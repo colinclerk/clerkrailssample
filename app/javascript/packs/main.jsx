@@ -13,15 +13,15 @@ import {
 } from "@clerk/clerk-react";
 
 const APIRequestButton = () => {
-  const [error, setError] = React.useState(null);
   const [response, setResponse] = React.useState(null);
+
   const makeRequest = async () => {
     const response = await fetch("/api/clerk_session");
     if (response.status == 200) {
       const session = await response.json();
       setResponse(session);
     } else {
-      setError(`Server failed with ${response.status}`);
+      setResponse(`Server failed with ${response.status}`);
     }
   };
 
@@ -29,7 +29,6 @@ const APIRequestButton = () => {
     <div style={{ textAlign: "center" }}>
       <button onClick={makeRequest}>Make request</button>
       {response && <div style={{ width: 400 }}>Response: {response}</div>}
-      {error && <div style={{ width: 400 }}>Error: {error}</div>}
     </div>
   );
 };
