@@ -3,6 +3,7 @@
   <head>
     <title>Clerkrails</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="CLERK_FRONTEND_API" content="<%= ENV.fetch("CLERK_FRONTEND_API") %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
