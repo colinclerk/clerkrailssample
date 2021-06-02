@@ -41,8 +41,12 @@ const APIRequestButton = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  const frontendApi = document.head.querySelector("meta[name='CLERK_FRONTEND_API']")?.content
+  if (!frontendApi) {
+    return alert("CLERK_FRONTEND_API is missing")
+  }
   ReactDOM.render(
-    <ClerkProvider frontendApi="clerk.7ica9.qk1o9.lcl.dev">
+    <ClerkProvider frontendApi={frontendApi}>
       <SignedIn>
         <APIRequestButton />
       </SignedIn>
